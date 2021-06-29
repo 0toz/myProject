@@ -6,65 +6,29 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <meta charset="UTF-8">
-<title>롤기</title>
+<title>LoLBTi</title>
 <style type="text/css">
-*{
 
+*{
  box-sizing: border-box;
 }
-
-body{
-
-text-align: center;
-}
-
-#all{
- 
-}
-header{
-  background-color: #666;
-  padding: 30px;
-  text-align: center;
-  
-  color: white;
-}
-#top_div{
- background-color: orange;
-width:1000px;
-height: 300px;
-}
-
-.logo{
-  float: left;
-  width: 30%;
-  height: 100px; 
-  background: #ccc;
-  padding: 20px;
-}
-
-.top_menu{
-background-color: white;
-color: green;
-margin-top: 100px;
-top: 100px;
-border: 2px solid Aliceblue;
-font-size: 18px;
-width : 150px;
-height: 80px;
-float: right;
-
-flex-direction: row;
-
-}
 .article{
-	background-color: skyblue;
-	width:1000px;
-	height: 300px;
-
+	display: grid;
+	grid-template-columns: 500px 1fr;
+	height: auto;
+	border-top: 2px solid aliceblue;
+	color: #84b7b8;
+	font-size: 24px;
+}
+.article2{
+	display: grid;
+	grid-template-columns: 1fr 500px;
+	height: auto;
+	border-top: 2px solid aliceblue;
+	color: #84b7b8;
+	font-size: 24px;
 }
 .art_text{
- width: 70%;
- height: 100%;
  float: left;
  padding: 40px;
  padding-top: 10px;
@@ -72,14 +36,11 @@ flex-direction: row;
 }
 
 .art_img{
-	width: 30%;
-	height: 100%;
+  max-width: 100%;
+  height: auto;
 	float: right;
-
 }
 .art_text2{
- width: 70%;
- height: 100%;
  float: right;
  padding: 40px;
  padding-top: 10px;
@@ -87,96 +48,64 @@ flex-direction: row;
 }
 
 .art_img2{
-	width: 30%;
-	height: 100%;
+  max-width: 100%;
+  height: auto;
 	float: left;
 }
-
-
-
-
+.title_span{
+	font-size: 30px;
+	display: block;
+	color: #879fde;
+	
+}
 
 </style>
 
 </head>
 
-
 <body>
 
+<%@ include file="top.jsp" %>
+
+
 	<div id="all">
-		<header>
-			<div id="top_div">
-				<div  class="logo">
-					<img alt="롤기로고" src="../images/logo.png">
-				</div>
-				<div class="top_menu">
-					<span>사이트 소개</span>
-				</div>
-				<div class="top_menu">
-					<span>롤 심리테스트</span>
-				</div>
-				<div class="top_menu">
-					<span>테스트 결과</span>
-				</div>
+
+
+		<div class="article">
+			<div class="art_text">
+				<span class="title_span">당신에게 어울리는 라인은 어디인가?</span>
+				<br>
+				<p> 대충 테스트에대해서 설명하는 글 대충 테스트에대해서 설명하는 글대충 테스트에대해서 설명하는 글대충 테스트에대해서 설명하는 글<br>대충
+				테스트에대해서 설명하는 글대충 테스트에대해서 설명하는 글대충 테스트에대해서 설명하는 글대충 테스트에대해서 설명하는 글</p>
 			</div>
-	
-		</header>
-	
-	<div class="article">
-		<div class="art_text"> 대충 테스트에대해서 설명하는 글</div>
-		<div class="art_img"> <img alt="그림" src="../images/logo.png"></div>
-	
-	
-	</div>
-	
-	
-	<div class="article">
-		<div class="art_text2"> 대충 테스트에대해서 설명하는 글</div>
-		<div class="art_img2"> <img alt="그림" src="../images/logo.png"></div>
-	
-	
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+			<div class="art_img">
+				<img alt="그림" src="../images/Teemo_18.jpg" width="100%"
+					height="100%">
+			</div>
+
+
+		</div>
+
+
+		<div class="article2">
+			<div class="art_img2">
+				<img alt="그림" src="../images/Teemo_0.jpg" width="100%" height="100%">
+			</div>
+			<div class="art_text2">
+				<span class="title_span">당신의 인생 챔피언은 누구인가?</span><br><p> 대충
+				테스트에대해서 설명하는 글대충 테스트에대해서 설명하는 글대충 테스트에대해서 설명하는 글대충 테스트에대해서 설명하는 글대충
+				테스트에대해서 설명하는 글대충 테스트에대해서 설명하는 글
+				</p>
+			</div>
 
 
 
+		</div>
 
 
-
-
-
-
-
+<%@ include file="footer.jsp" %>
 
 
 	</div>
-
-
-
-
-
-
 </body>
 </html>
